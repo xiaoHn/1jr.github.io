@@ -11,15 +11,14 @@
 <div id="tip"></div>
 <script type="text/javascript">
     navigator.geolocation.getCurrentPosition(function(position) {
-        console.log(position)
+        alert('begin');
         $.get("http://119.29.159.207/data.php",{ getLng: lng, getLat: lat},function(result){
-            alert('navigator');
+        alert('end');
         });
     },function (err) {
         console.log('err')
         console.log(err)
     });
-alert('script');
 </script>
 </body>
 </html>
