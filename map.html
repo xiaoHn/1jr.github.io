@@ -13,7 +13,8 @@
     navigator.geolocation.getCurrentPosition(function(position) {
         console.log(position)
         $.get("http://119.29.159.207/data.php",{ getLng: lng, getLat: lat},function(result){
-            console.log('成功')
+            console.log('成功');
+            alert('ok');
         });
     },function (err) {
         console.log('err')
